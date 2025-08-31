@@ -1,133 +1,140 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  --angle: 45deg;
-  background: linear-gradient(var(--angle), oklab(18.2% 0 0), oklab(21.8% 0 0));
-  text-align: center;
-  font-family: Arial, sans-serif;
+    --angle: 45deg;
+    background: linear-gradient(var(--angle), oklab(18.2% 0 0), oklab(21.8% 0 0));
+    text-align: center;
+    font-family: Arial, sans-serif;
 }
 
 h1 {
-  color: aqua;
-  margin: 20px 0;
+    color: aqua;
+    margin: 20px 0;
 }
 
 .container {
-  height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .game {
-  height: 60vmin;
-  width: 60vmin;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .box {
-  height: 18vmin;
-  width: 18vmin;
-  border-radius: 16px;
-  border: none;
-  font-size: 5vmin; /* responsive font size */
-  background-color: whitesmoke;
-  font-weight: 600;
-  color: black;
-  cursor: pointer;
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 16px;
+    border: none;
+    font-size: 5vmin;
+    /* responsive font size */
+    background-color: whitesmoke;
+    font-weight: 600;
+    color: black;
+    cursor: pointer;
 }
 
 .buttons {
-  margin-top: 20px;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #reset,
 #newgamebtn {
-  border: none;
-  border-radius: 16px;
-  padding: 0.6em 1.2em;
-  font-weight: 600;
-  font-size: 1em;
-  cursor: pointer;
-  transition: 0.2s ease-in-out;
+    border: none;
+    border-radius: 16px;
+    padding: 0.6em 1.2em;
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
 }
 
 #reset {
-  background-color: aquamarine;
-  color: black;
+    background-color: aquamarine;
+    color: black;
 }
 
 #newgamebtn {
-  background-color: darkcyan;
-  color: white;
+    background-color: darkcyan;
+    color: white;
 }
 
 #reset:hover,
 #newgamebtn:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 #msg {
-  color: firebrick;
-  font-size: 5vmin;
-  font-weight: 900;
-  margin-top: 15px;
+    color: firebrick;
+    font-size: 5vmin;
+    font-weight: 900;
+    margin-top: 15px;
 }
 
 .hide {
-  display: none;
+    display: none;
 }
-
-/* 📱 Tablets */
+/* ✅ Responsive Design */
 @media (max-width: 768px) {
-  .game {
-    width: 80vmin;
-    height: 80vmin;
-    gap: 6px;
-  }
+    .game {
+        width: 80vmin;
+        height: 80vmin;
+        gap: 8px;
+    }
 
-  .box {
-    font-size: 7vmin;
-  }
+    .box {
+        width: 24vmin;
+        height: 24vmin;
+        font-size: 32px;
+    }
 
-  #msg {
-    font-size: 6vmin;
-  }
+    #msg {
+        font-size: 28px;
+    }
 }
 
-/* 📱 Mobiles */
 @media (max-width: 480px) {
-  .game {
-    width: 95vmin;
-    height: 95vmin;
-    gap: 4px;
-  }
+    h1 {
+        font-size: 24px;
+    }
 
-  .box {
-    font-size: 9vmin;
-  }
+    .game {
+        width: 90vmin;
+        height: 90vmin;
+        gap: 6px;
+    }
 
-  #reset,
-  #newgamebtn {
-    width: 45%;
-    font-size: 0.9em;
-    padding: 0.5em 1em;
-  }
+    .box {
+        width: 28vmin;
+        height: 28vmin;
+        font-size: 24px;
+    }
 
-  #msg {
-    font-size: 8vmin;
-  }
+    #reset,
+    #newgamebtn {
+        width: 100px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    #msg {
+        font-size: 20px;
+    }
 }
