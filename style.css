@@ -1,89 +1,133 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
-body{
-
---angle: 45deg;
-    background: linear-gradient(var(--angle), oklab(18.2% 0 0), oklab(21.8% 0 0));
-text-align: center;
-
-
+body {
+  --angle: 45deg;
+  background: linear-gradient(var(--angle), oklab(18.2% 0 0), oklab(21.8% 0 0));
+  text-align: center;
+  font-family: Arial, sans-serif;
 }
 
-h1{
-color: aqua;
+h1 {
+  color: aqua;
+  margin: 20px 0;
 }
 
-
-.container{
-
-    height: 70vh;
-
-    display: flex;
-        justify-content: center;
-        align-items: center;
-   
-}
-.game{
-
-    height: 60vmin;
-    width: 60vmin;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-flex-wrap: wrap;
-gap: 10px;
+.container {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.box{
-
-    height: 18vmin ;
-    width: 18vmin;
-border-radius: 16px;
-border: none;
-font-size: 50px;
-background-color: whitesmoke;
-font-weight: 600;
-color: black;
-
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-#reset{
-
-    padding: 5px;
-    height: 30px;
-    width: 110px;
-border-radius: 16px;
-background-color: aquamarine;
-color: black;
-font-weight: 600;
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 16px;
+  border: none;
+  font-size: 5vmin; /* responsive font size */
+  background-color: whitesmoke;
+  font-weight: 600;
+  color: black;
+  cursor: pointer;
 }
 
-#newgamebtn{
-    margin-top: 10px;
-    border: none;
-padding: 11px;
-    height: 40px;
-    width: 130px;
-    border-radius: 16px;
-    background-color:darkcyan;
-    color: black;
-    font-weight: 700;
-    font-size: 15px;
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
+#reset,
+#newgamebtn {
+  border: none;
+  border-radius: 16px;
+  padding: 0.6em 1.2em;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
 
+#reset {
+  background-color: aquamarine;
+  color: black;
+}
 
-#msg{
-    color:firebrick;
-    font-size: 40px;
-    font-weight: 900;
+#newgamebtn {
+  background-color: darkcyan;
+  color: white;
+}
+
+#reset:hover,
+#newgamebtn:hover {
+  transform: scale(1.05);
+}
+
+#msg {
+  color: firebrick;
+  font-size: 5vmin;
+  font-weight: 900;
+  margin-top: 15px;
 }
 
 .hide {
-    display: none;
+  display: none;
+}
+
+/* 📱 Tablets */
+@media (max-width: 768px) {
+  .game {
+    width: 80vmin;
+    height: 80vmin;
+    gap: 6px;
+  }
+
+  .box {
+    font-size: 7vmin;
+  }
+
+  #msg {
+    font-size: 6vmin;
+  }
+}
+
+/* 📱 Mobiles */
+@media (max-width: 480px) {
+  .game {
+    width: 95vmin;
+    height: 95vmin;
+    gap: 4px;
+  }
+
+  .box {
+    font-size: 9vmin;
+  }
+
+  #reset,
+  #newgamebtn {
+    width: 45%;
+    font-size: 0.9em;
+    padding: 0.5em 1em;
+  }
+
+  #msg {
+    font-size: 8vmin;
+  }
 }
